@@ -1,0 +1,209 @@
+
+:root {
+    --pg-brand: #7c3aed;
+    --pg-brand-dark: #5b21b6;
+    --pg-accent: #9333ea;
+    --pg-warm: #d97706;
+    --pg-canvas: #fafaf9;
+    --pg-gradient: linear-gradient(135deg, var(--pg-brand) 0%, var(--pg-accent) 55%, #c084fc 100%);
+    --pg-nav-h: 76px;
+    --pg-panel-inset: 12.5%;
+}
+
+body {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    background-color: var(--pg-canvas);
+    padding-top: var(--pg-nav-h);
+}
+
+.pg-fw-heavy {
+    font-weight: 800;
+}
+
+.pg-text-brand {
+    color: var(--pg-brand) !important;
+}
+
+.bg-violet-soft {
+    background: linear-gradient(180deg, #f5f3ff 0%, #ede9fe 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+/* --- Hero --- */
+.pg-hero {
+    min-height: calc(100vh - var(--pg-nav-h));
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(
+            to right,
+            rgba(77, 23, 154, 0.78),
+            rgba(89, 22, 139, 0.78)
+        ),
+        url("../images/hero-bg-img.png");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+@media (max-width: 991.98px) {
+    .pg-hero {
+        background-attachment: scroll;
+    }
+}
+
+.pg-hero .pg-search-box {
+    border-radius: 1rem;
+}
+
+.pg-hero-stat-note {
+    color: #ddd6fe;
+}
+
+/* Section headings */
+.pg-section-head .pg-mini-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+}
+
+.pg-heading-fancy {
+    background: var(--pg-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* --- Listing cards --- */
+.pg-listing-card .card-img-top {
+    height: 16rem;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.pg-listing-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.pg-listing-card .img-wrap {
+    overflow: hidden;
+}
+
+/* --- Services tabs --- */
+#pg-services .nav-link {
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: #64748b;
+    border-radius: 0;
+}
+
+#pg-services .nav-link:hover {
+    color: var(--pg-brand);
+    border-bottom-color: #c4b5fd;
+}
+
+#pg-services .nav-link.active {
+    color: var(--pg-brand) !important;
+    background: #f5f3ff;
+    border-bottom-color: var(--pg-brand);
+}
+
+/* --- Reviews --- */
+#pg-reviews {
+    background: linear-gradient(120deg, #4c1d95 0%, #5b21b6 40%, #6b21a8 100%);
+}
+
+#pg-reviews .carousel-control-prev,
+#pg-reviews .carousel-control-next {
+    width: 3rem;
+    height: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#pg-reviews .carousel-indicators [data-bs-target] {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.35);
+    border: none;
+}
+
+#pg-reviews .carousel-indicators .active {
+    background-color: #fff;
+}
+
+/* --- FAQ --- */
+#pg-faq .accordion-button:not(.collapsed) {
+    color: var(--pg-brand);
+    background-color: #f5f3ff;
+}
+
+#pg-faq .accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(124, 58, 237, 0.2);
+}
+
+/* --- Contact --- */
+.pg-contact-swatch {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+#pg-contact .pg-contact-art {
+    pointer-events: none;
+    z-index: 0;
+}
+
+#pg-contact .pg-contact-art .pg-art-blob-tr {
+    width: 24rem;
+    height: 24rem;
+    top: -10rem;
+    right: -10rem;
+    background-color: #ede9fe;
+    opacity: 0.5;
+}
+
+#pg-contact .pg-contact-art .pg-art-blob-bl {
+    width: 24rem;
+    height: 24rem;
+    bottom: -10rem;
+    left: -10rem;
+    background-color: #f3e8ff;
+    opacity: 0.5;
+}
+
+#pg-contact .pg-contact-art .pg-art-ring-tr {
+    width: 8rem;
+    height: 8rem;
+    top: 5rem;
+    right: 5rem;
+    border: 4px solid #ddd6fe;
+    background: transparent;
+}
+
+#pg-contact .pg-contact-art .pg-art-ring-bl {
+    width: 6rem;
+    height: 6rem;
+    bottom: 8rem;
+    left: 8rem;
+    border: 4px solid #e9d5ff;
+    background: transparent;
+}
+
+.pg-site-footer {
+    background: linear-gradient(90deg, #4c1d95 0%, #6b21a8 100%);
+}
